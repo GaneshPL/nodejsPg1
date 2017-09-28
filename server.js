@@ -49,6 +49,15 @@ app.get('/about', (req, res)=> {
   })
 })
 
+app.get('/projects',(req, res)=>{
+  // res.send('This is RESTAPI using <b>Express!<b>')
+  res.render('projects.hbs',{
+    title:'Projects Page',
+    info: 'We are planning to come with below projects soon..'
+  })
+})
+
+
 app.get('/bad', (req, res)=> {
     res.send({
       errorMessage:'Something bad in this site'
