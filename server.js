@@ -2,6 +2,7 @@ const exp = require('express')
 const hbs = require('hbs')
 const fs = require('fs')
 
+const port = process.env.PORT || 3008
 var app = exp();
 hbs.registerPartials(__dirname + '/views/partials')
 
@@ -54,6 +55,6 @@ app.get('/bad', (req, res)=> {
     })
 })
 
-app.listen(3008, ()=>{
-  console.log('Server is running in 3008');
+app.listen(port, ()=>{
+  console.log(`Server is running in ${port}`);
 });
